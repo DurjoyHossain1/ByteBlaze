@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MdBookmarkAdd } from "react-icons/md";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
+import { saveBlogs } from "../Utils";
 
 const Blogs = () => {
   const blog = useLoaderData();
@@ -18,6 +19,7 @@ const Blogs = () => {
 
   const handelBookMark = blog =>{
     console.log(blog);
+    saveBlogs(blog)
   } 
 
 
